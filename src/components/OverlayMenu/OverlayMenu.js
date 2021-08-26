@@ -15,7 +15,7 @@ const OverlayMenu = ({menuOpen, callback}) => {
   return(
     <Overlay menuOpen={menuOpen}>
       <div className="inner">
-        <img className="invertedLogo" src={InvertedLogo} alt="Our website inside the mobile menu" />
+        <img className="invertedLogo" src={InvertedLogo} alt="Our website logo inside the mobile menu" />
         {/* Menu items  */}
         <ul className="overlayMenu">
           {wpMenu.menuItems.nodes.map(item => (
@@ -27,7 +27,7 @@ const OverlayMenu = ({menuOpen, callback}) => {
           ))}
         </ul>
         {/* Close Button for closing the mobile menu  */}
-        <div className="closeButton" onClick={callback} role="button" tabIndex="0">
+        <div className="closeButton" onClick={callback} role="button" tabIndex="0" onKeyDown={callback}>
           <img src={CloseButton} alt="Close Button for the mobile menu of the website" />
         </div>
       </div>
