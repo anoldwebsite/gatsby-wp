@@ -29,3 +29,8 @@ export const useMenuQuery = () => {
   `)
   return data;
 };
+/*
+There is a line in the code above:       wpMenu(name: {eq: "mainMenu"}) {
+  The wpMenu means word press menu. You can rename it to menu, for example, if you want to, writing it as follows:
+      menu:  wpMenu(name: {eq: "mainMenu"}) {
+*/
