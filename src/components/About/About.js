@@ -1,4 +1,5 @@
 import React from 'react';
+import parse from 'html-react-parser';
 import { useAboutQuery } from '../../hooks/useAboutQuery';
 
 import {AboutImage, AboutWrapper} from './About.styles';
@@ -11,7 +12,7 @@ const About = () => {
     <AboutWrapper>
       <AboutImage image={imageData} />
       <div className="about-text">
-        <div dangerouslySetInnerHTML={{ __html: data.wpPage.content }} /> {/* To avoid using the dnagerouslySetInnerHTML use parse() as shown in module LatestBlogPost.js */}
+        {parse(`<div>${data.wpPage.content}</div>`)}
       </div>
     </AboutWrapper>
   )
